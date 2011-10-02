@@ -6,7 +6,9 @@ package com.tinydragonapps.duckencoder;
 /*     */ import java.io.IOException;
 /*     */ import java.io.PrintStream;
 /*     */ import java.util.ArrayList;
-/*     */ import java.util.List;
+import java.util.List;
+
+import android.os.Environment;
 /*     */ //import javax.swing.text.BadLocationException;
 /*     */ //import javax.swing.text.Document;
 /*     */ //import javax.swing.text.rtf.RTFEditorKit;
@@ -284,7 +286,8 @@ package com.tinydragonapps.duckencoder;
 /* 389 */       data[i] = ((Byte)file.get(i)).byteValue();
 /*     */     try
 /*     */     {
-/* 392 */       File someFile = new File(fileDest);
+				File sdCardDirectory = Environment.getExternalStorageDirectory();
+/* 392 */       File someFile = new File(sdCardDirectory, fileDest);
 /* 393 */       FileOutputStream fos = new FileOutputStream(someFile);
 /* 394 */       fos.write(data);
 /* 395 */       fos.flush();
