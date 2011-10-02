@@ -5,7 +5,7 @@
     android:layout_height="fill_parent"
     android:weightSum="1">
     <EditText android:id="@+id/scriptNameField" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Script Name (Optional)"></EditText>
-    <EditText android:layout_height="wrap_content" android:layout_width="match_parent" android:id="@+id/codeField" android:inputType="textMultiLine" android:layout_weight="0.49" android:gravity="top" android:text="@string/defaultDuckyCode">
+    <EditText android:layout_width="match_parent" android:id="@+id/codeField" android:inputType="textMultiLine" android:gravity="top" android:text="@string/defaultDuckyCode" android:layout_height="match_parent" android:layout_weight="1.0">
         <requestFocus></requestFocus>
     </EditText>
     <Button android:id="@+id/encodeButton" android:text="Encode and Save to SD Card" android:layout_height="wrap_content" android:layout_width="match_parent" ></Button>
