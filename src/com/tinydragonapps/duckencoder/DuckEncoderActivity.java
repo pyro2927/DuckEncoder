@@ -33,6 +33,7 @@ public class DuckEncoderActivity extends Activity implements OnClickListener {
     }
     @Override
     public void onResume(){
+    	super.onResume();
     	//on resume, check to make sure that we have access to the SD card
     	Button encodeButton = (Button)findViewById(R.id.encodeButton);
     	
