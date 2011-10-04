@@ -5,4 +5,5 @@
     <string name="defaultDuckyCode">GUI r\nDELAY 200\nSTRING notepad.exe\nENTER\nDELAY 100\nSTRING Hello World!</string>
     <string name="savePayloadFile">Save Payload Script</string>
     <string name="loadPayloadFile">Load Payload Script</string>
+    <string name="info">Info</string>
 </resources>

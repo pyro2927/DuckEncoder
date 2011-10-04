@@ -57,7 +57,10 @@ public class DuckEncoderActivity extends Activity implements OnClickListener {
     	boolean mExternalStorageAvailable = false;
     	boolean mExternalStorageWriteable = false;
     	String state = Environment.getExternalStorageState();
-
+    	
+    	while(Environment.MEDIA_CHECKING.equals(state)){
+    		state = Environment.getExternalStorageState();
+    	}
     	if (Environment.MEDIA_MOUNTED.equals(state)) {
     	    // We can read and write the media
     	    mExternalStorageAvailable = mExternalStorageWriteable = true;
@@ -98,6 +101,8 @@ public class DuckEncoderActivity extends Activity implements OnClickListener {
 	    switch (item.getItemId()) {
 	    //user tapped save button
 	    case R.id.save:
+	    	//TODO: take this return statement out after completion of this feature
+	    	
 	    	EditText filenameField = (EditText)this.findViewById(R.id.scriptNameField);
 	    	EditText scriptField = (EditText)this.findViewById(R.id.codeField);
 	    	String filename = filenameField.getEditableText().toString();
@@ -114,6 +119,9 @@ public class DuckEncoderActivity extends Activity implements OnClickListener {
 	    //user tapped load button
 	    case R.id.load:
 	        return true;
+	    case R.id.info:
+	    	new AlertDialog.Builder(this).setTitle("DuckEncoder v0.1").setMessage("Written by Joe Pintozzi\nduckencoder originally written by Jason Appelbaum\nLicensed under CC Attribution-NonCommercial-ShareAlike 3.0 Unported").setPositiveButton("OK", null).create().show();
+	    	return true;
 	    default:
 	        return super.onOptionsItemSelected(item);
 	    }

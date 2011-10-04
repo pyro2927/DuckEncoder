@@ -3,4 +3,6 @@
           android:title="@string/savePayloadFile" />
     <item android:id="@+id/load"
           android:title="@string/loadPayloadFile" />
+    <item android:id="@+id/info"
+          android:title="@string/info" />
 </menu>
